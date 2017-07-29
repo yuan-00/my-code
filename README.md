@@ -1,2 +1,3 @@
 # my-code
-yuan测试代码
+代码
+PHP（thinkPHP） + MySQL + Apache

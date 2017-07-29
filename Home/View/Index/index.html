@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>园林社区</title>
+<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}index.css" />
+<script type="text/javascript">var Home_Url = "{$Think.const.HOME_URL}";
+ function href(){
+	 window.location.href="{$Think.HOME_URL}Index/register";
+}
+</script>
+</head>
+<body>
+<div class="top">欢迎！在此演绎你的网络人生<span>目前在线：0</span></div>
+<empty name="data"> 
+	<div class="login">
+			<form action="{:U('Index/login')}" method="post" >
+				<input type="text" placeholder="用户名" name="name" />
+				<input type="password" placeholder="密码" name="password" />
+				<input type="submit" value="登录" /></a> 
+		 		<input type="button" value="注册" onclick="href()" />
+				<a href="{:U('Blog/index')}">直接进入</a>
+			</form>
+	</div>
+<else/>
+	<div class="login">
+	  	
+			欢迎回来，{$data}&nbsp;！
+			<a href="{:U('Home/Blog/index')}"><input type="button" value="点击进入" /></a> 
+			<a href="{:U('Home/Index/logout')}"><input type="button" value="退出" /></a>
+		
+	</div>
+</empty>
+	<div class="center border_radius">
+		<p><b>青玉案·元夕<b></p>
+		<p>东风夜放花千树，更吹落，星如雨。</p>
+		<p>宝马雕车香满路。</p>
+		<p>凤箫声动，玉壶光转，一夜鱼龙舞。</p>
+		<p>蛾儿雪柳黄金缕，笑语盈盈暗香去。</p>
+		<p>众里寻他千百度，蓦然回首，</p>
+		<p>那人却在，灯火阑珊处。</p>
+		<div class="index_righttop"><img src="{$Think.const.IMG_URL}top.jpg" /></div>
+		<div class="index_leftbottom"><img src="{$Think.const.IMG_URL}left.jpg" /></div>
+	</div>
+	<div class="copyright"><p style="font-style:oblique;">copyright</p><p>yuan_00&nbsp;&nbsp;邮箱：yuan_yal_0@163.com</p></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>

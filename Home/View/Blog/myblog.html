@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>园林社区</title>
+<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}blog.css" />
+<script type="text/javascript" src= "{$Think.const.JS_URL}jquery-1.11.2.min.js" ></script>
+<script type="text/javascript" src="{$Think.const.JS_URL}myblog.js" ></script>
+<script type="text/javascript">var Home_Url = "{$Think.const.HOME_URL}";</script>
+</head>
+<body>
+<div class="blog_top">
+	<div class="top_inner">
+		<div class="top_logo"><img alt="logo" src="{$Think.const.IMG_URL}logo.png" ></div>
+		<div class="top_daohang">
+			<form><input type="text" placeholder="没有什么想说的吗">
+			<input class="btn-info" type="submit" value="查询"></form>
+		</div>
+		<div class="top_denglu">
+			<empty name="data">
+				<span><a href="{:U('Index/index')}">登录</a></span>
+				<span><a href="{$Think.const.HOME_URL}Index/register.html">注册</a></span>
+			<else />
+				<span>Hi，&nbsp;<span id="username">{$data}</span>&nbsp;&nbsp;</span><span><a href="{:U('Home/Index/logout')}">退出</a></span>
+			</empty>
+		</div>
+	</div>
+</div>
+
+<div class="blog_center">
+	<div class="center_left border_radius">
+		<a href="{:U('Blog/index')}" ><div>首页</div></a>
+		<div id="guding">我的动态</div>
+		<a href="{:U('Blog/mycomment')}" ><div>我的评论</div></a>
+		<a href="{:U('Blog/aboutme')}" ><div>评论我的</div></a>
+		
+	</div>
+	<div class="center_center border_radius">
+		<span>我的动态</span>
+ <!--   <div>
+			<span class="span1">来自：admin</span>
+			<span class="span2">第一条记录</span>
+			<span class="span3">20150821</span>
+			<p>第一条记录内容第一条记录内容第一条记录内容第一条记录内容第一条记录内容第一条记录内容
+			第一条记录内容第一条记录内容第一条记录内容第一条记录内容第一条记录内容第一条记录内容</p>
+		</div>    -->      
+		<empty name='data'>
+			<div><span>请登录...</span></div> 
+		<else />
+		</empty>
+	</div>
+	<div class="center_right border_radius">
+		<form method="post" action="{:U('Blog/send_message')}">
+			<div class="right_top">
+				<span>有什么新鲜话题要说呢？</span><br>
+				在此输入话题名：<input type="text" name="name" />
+			</div>
+			<div class="right_center">
+				在此输入内容：<br>
+				<textarea rows="4" cols="20" name="describe"></textarea><br>
+				<input type="submit" value="立即发布" />
+			</div>
+		</form>
+	</div>
+</div>
+</body>
+</html>

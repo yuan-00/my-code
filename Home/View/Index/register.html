@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>园林社区</title>
+<script type="text/javascript" src="{$Think.const.JS_URL}js.js"></script>
+<script type="text/javascript" src="{$Think.const.JS_URL}jquery-1.11.2.min.js"></script>
+<script type="text/javascript">var Home_Url = "{$Think.const.HOME_URL}";</script>
+<link rel="stylesheet" type="text/css" href="{$Think.const.CSS_URL}index.css" />
+</head>
+<body class="register_body">
+<div class="Register_top">
+	<div class="register_font">账户注册</div>
+	<a href="{:U('Index/index')}"><div class="register_index">返回首页</div></a>
+</div>
+<div class="register_center border_radius">
+	<form action="{:U('Index/insert')}" method="post">
+		<div>请输入用户名：<input type="text" name="name" /><div class="div1"></div></div>
+		<div>请输入密码：&nbsp;&nbsp;&nbsp;<input type="password" name="password" /><div class="div2"></div></div>
+		<div>请再次输入密码:<input type="password" name="password2" /><div class="div3"></div></div>
+		<div><img id="change_yanzhengma" src="{$Think.const.HOME_URL}Common/verify" /></div>
+		<div>请输入验证码：<input type="text" name="yanzhengma" /><div></div></div>
+		<div><input type="button" value="注册" /></div>
+	</form>
+</div>
+<script>ss();</script>
+</body>
+</html>
